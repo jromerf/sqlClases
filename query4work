@@ -1,0 +1,18 @@
+create table prueba (
+    campo1 varchar2(20),
+    campo2 varchar2(20),
+    campo3 varchar2(20)
+);
+
+insert into prueba values('texto1','texto2','texto3');
+insert into prueba values('1','47','78234');
+insert into prueba values('0075','1300','0460045332');
+insert into prueba values('53','47','4663');
+
+select * from prueba;
+
+select lpad(campo1,4,'0'),lpad(campo2,3,'0'),lpad(campo3,8,'0') from prueba;
+
+select campo1,campo2,substr(campo3,1,3)||'-'||substr(campo3,4,7) from prueba;
+
+select lpad(campo1,4,'0'),lpad(campo2,3,'0')||lpad(campo3,7,'0') from prueba;
